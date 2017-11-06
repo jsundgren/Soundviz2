@@ -10,7 +10,6 @@ function setup(){
     createCanvas(0.75*windowWidth, 0.75*windowHeight,WEBGL);
     colorMode(HSB);
     song.loop();
-    filter = new p5.HighPass();
     analyzer = new p5.Amplitude();
     analyzer.setInput(song);
     fft = new p5.FFT(0.9,64);
@@ -33,7 +32,7 @@ function draw(){
             push();
                 translate(2*i*w,y,0);
                 ambientMaterial(i,255,255);
-                sphere(30);
+                sphere(30+rms*10);
             pop();
         }
     pop();
