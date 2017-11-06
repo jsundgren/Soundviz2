@@ -3,7 +3,7 @@ var w;
 var filter;
 
 function preload(){
-    song = loadSound('fy.ogg');
+    song = loadSound('tt.ogg');
 }
 
 function setup(){
@@ -29,7 +29,7 @@ function draw(){
         for(var i = 0; i < spectrum.length; i++){
             var amp = spectrum[i];
             var y = map(amp, 0, 255, height, 0);
-            rotateY(frameCount * 0.0003);
+            rotateY(frameCount * 0.0005);
             push();
                 translate(2*i*w,y,0);
                 ambientMaterial(i,255,255);
