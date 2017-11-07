@@ -38,6 +38,16 @@ function draw(){
     pop();
 }
 
+function pause(){
+    if(song.isPlaying()){
+        song.pause();
+        document.getElementById("ppToggle").innerHTML = "&#9654;";
+    }else{
+        song.play();
+        document.getElementById("ppToggle").innerHTML = "&#9724;";
+    }
+}
+
 function windowResized() {
   resizeCanvas(0.75*windowWidth, 0.75*windowHeight);
 }
