@@ -12,7 +12,7 @@ function setup(){
     song.loop();
     analyzer = new p5.Amplitude();
     analyzer.setInput(song);
-    fft = new p5.FFT(0.9,64);
+    fft = new p5.FFT(0.8,64);
     fft.setInput(song);
     w = width / 64;
 }
